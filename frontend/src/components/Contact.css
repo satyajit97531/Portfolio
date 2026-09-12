@@ -1,0 +1,45 @@
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contact-illustration {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.contact-info p {
+    margin-bottom: 0.5rem;
+    word-break: break-all;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark-blue);
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #e9ecef;
+    font-size: 1rem;
+}
+.contact-right button {
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.status-message {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+}

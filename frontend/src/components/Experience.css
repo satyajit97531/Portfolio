@@ -1,0 +1,59 @@
+.experience-card {
+  padding: 3rem 2.5rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cert-box {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.cert-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cert-image-container img {
+    width: 100%;
+    object-fit: contain;
+    aspect-ratio: 4 / 3;
+    background-color: #ffffff;
+    display: block;
+}
+
+.cert-image-container {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 3px solid var(--gold);
+}
+
+.cert-info {
+  padding: 1.5rem;
+}
+
+.cert-info h3 {
+  font-size: 1.25rem;
+  color: var(--dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.cert-info .company {
+  font-weight: 600;
+  color: #4a4a4a;
+  margin-bottom: 0.25rem;
+}
+
+.cert-info .duration {
+  font-size: 0.9rem;
+  color: #777;
+}

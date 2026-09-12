@@ -1,0 +1,76 @@
+.projects-card {
+    padding: 3rem 2.5rem;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+.projects-card {
+  padding: 3rem 2.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.project-box {
+  position: relative; /* Required for the overlay */
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600; /* Made slightly bolder to read over images */
+  color: var(--dark-blue);
+  text-decoration: none; /* Removes link underline */
+  overflow: hidden; /* Keeps the overlay inside the rounded corners */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Elevate the card on hover */
+.project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* The Translucent Gold Overlay */
+.project-box::before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background-color: var(--gold);
+  opacity: 0.85; /* Adjust this value (0.0 to 1.0) for more or less transparency */
+  z-index: 1; /* Places it above the background image */
+  transition: opacity 0.3s ease;
+}
+
+/* Make the image clearer on hover */
+.project-box:hover::before {
+  opacity: 0.5; 
+}
+
+/* Ensure the text stays on top of the overlay */
+.project-box-title {
+  position: relative;
+  z-index: 2; 
+  text-align: center;
+  padding: 0 10px;
+}
+
+.projects-card h2 {
+  padding-bottom: 40px;
+}
+
+.projects-card h2 {
+    padding-bottom: 40px;
+}
