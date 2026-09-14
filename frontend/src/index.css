@@ -52,51 +52,69 @@ body {
 }
 
 /* =========================================
-   MOBILE RESPONSIVENESS OVERRIDES 
+   PRO MOBILE OVERRIDES (REPLACE THE OLD ONE)
    ========================================= */
 @media (max-width: 768px) {
-  /* 1. Prevent horizontal scrolling from the navbar */
-  body, html {
-    overflow-x: hidden;
-    width: 100%;
-  }
-
-  /* 2. Make the Navbar wrap so it doesn't run off the screen */
-  header, nav, ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px;
-    text-align: center;
-  }
-
-  /* 3. Force all side-by-side layouts to stack vertically */
-  .container, .split-layout, section {
+  /* 1. Fix Navbar: Name centered on top, links in a clean row below */
+  header {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    padding: 15px 0 !important;
     width: 100% !important;
-    padding: 15px !important;
+  }
+  header nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    padding: 0 !important;
+    margin-top: 10px !important;
+  }
+
+  /* 2. Kill the grey borders so the content breathes */
+  body, #root, main, .container {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden;
+  }
+
+  /* 3. Stack everything and put the PHOTO ON TOP */
+  /* column-reverse pushes the right-side element (photo) above the left-side (text) */
+  .split-layout, section > div {
+    display: flex !important;
+    flex-direction: column-reverse !important; 
+    align-items: center !important;
+    width: 100% !important;
+    padding: 20px 15px !important;
     box-sizing: border-box;
   }
 
-  /* 4. Force all left/right boxes to stretch across the full phone screen */
-  .left-pane, .right-pane, .contact-left, .contact-right, [class*="left"], [class*="right"] {
+  /* 4. Keep the Contact page normal (Text on top, Form on bottom) */
+  #contact .split-layout, .contact-section {
+    flex-direction: column !important;
+  }
+
+  /* 5. Center the text and fix the massive dark blue box */
+  .left-pane, .right-pane, [class*="left"], [class*="right"] {
     width: 100% !important;
     min-width: 100% !important;
-    padding: 20px 0 !important;
+    height: auto !important; /* Stops the blue box from stretching vertically */
+    text-align: center !important; /* Centers text for a better mobile feel */
+    padding: 15px 0 !important;
   }
 
-  /* 5. Fix the tiny form inputs in the Contact section */
-  .form-group, input, textarea {
+  /* 6. Fix forms and keep photos from getting awkwardly massive */
+  input, textarea, .form-group {
     width: 100% !important;
     box-sizing: border-box;
   }
-
-  /* 6. Ensure images and project cards shrink to fit */
-  img, .project-card {
-    max-width: 100% !important;
-    height: auto;
+  .project-card, img {
+    width: 100% !important;
+    max-width: 350px !important; 
+    margin: 0 auto !important;
   }
 }
