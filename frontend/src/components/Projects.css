@@ -74,17 +74,3 @@
 .projects-card h2 {
     padding-bottom: 40px;
 }
-
-/* Mobile-Responsive Styles */
-@media (max-width: 768px) {
-  .split-layout {
-    display: flex;
-    flex-direction: column; /* This forces the left and right sides to stack on top of each other */
-    align-items: center;
-  }
-  
-  .left-pane, .contact-right {
-    width: 100%; /* Ensures the form and image take up the full screen width */
-    padding: 10px; /* Adds breathing room on small screens */
-  }
-}
