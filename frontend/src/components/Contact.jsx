@@ -19,7 +19,7 @@ const Contact = () => {
     const onSubmit = async e => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/api/contact', formData);
+            const res = await axios.post('http://portfolio-mu-liard-78.vercel.app/api/contact', formData);
             setStatus('Message sent successfully!');
             setFormData({ name: '', email: '', phone: '', message: '' });
             setTimeout(() => setStatus(''), 3000); // Clear status after 3 seconds
